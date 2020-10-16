@@ -1,0 +1,12 @@
+{% block content%}
+<div class="container">
+  <h1>Delete Post</h1>
+  <div class="card-body style="width: 80rem;" >
+    <form action="" method="POST">
+      {% csrf_token %}
+      <p>Are you sure you want to delete "{{ post.title }}"?</p>
+    <input type="submit" value="Confirm" /> 
+    </form>
+  </div>
+</div>
+{% endblock content%}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="test_css">Check css effect</h2>
+{% for post in object_list %}
+<div class="test_css">
+  <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+  <p>{{ post.body}}</p>
+</div>
+{% endfor %}
+{% endblock content %}

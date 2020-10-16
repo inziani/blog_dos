@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content%}
+<div class="container">
+  <h1>Edit Post</h1>
+  <div class="card-body style="width: 80rem;" >
+    <form action="{% url 'edit_post' pk=object.id %}" method="POST">
+      {% csrf_token %}
+      {{ form|crispy }}
+    <input type="submit" value="Update" /> 
+    </form>
+  </div>
+</div>
+{% endblock content%}
